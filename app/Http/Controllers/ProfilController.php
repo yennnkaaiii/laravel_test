@@ -22,4 +22,7 @@ class ProfilController extends Controller
     public function kontak() {
         return view('kontak');
     }
+    public function home() {
+        return view('home');
+    }
 }

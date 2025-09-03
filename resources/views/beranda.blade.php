@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Beranda</title>
-      <link rel="stylesheet" href="{{ asset('style.css') }}">
-
+    <title>Home</title>
 </head>
-<body>
-      <nav>
-        <a href="/">Beranda</a>
-        <a href="/profil">Profil</a>
-        <a href="/kontak">Kontak</a>
-    </nav>
-    <h1>Selamat Datang di Website Saya</h1>
-    <p>Ini adalah halaman beranda sederhana menggunakan Laravel.</p>
+<x-layout></x-layout>
+<body class="bg-gray-900 text-white">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="text-center">
+            <h1 class="text-3xl font-bold mb-6">Selamat Datang di Website Saya</h1>
+            <p class="text-lg">Ini adalah halaman beranda sederhana menggunakan Laravel.</p>
+        </div>
+    </div>
+    <style>
+        body {
+            background-color: #0b1a2a; /* Warna gelap */
+            color: white; /* Ubah teks menjadi putih */
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </body>
 </html>

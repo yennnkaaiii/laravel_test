@@ -1,4 +1,4 @@
-/* Reset sederhana */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -7,7 +7,6 @@ body {
     color: #333;
 }
 
-/* Navbar */
 nav {
     background: #3498db;
     padding: 15px;
@@ -25,7 +24,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Container utama */
+
 .container {
     max-width: 800px;
     margin: 30px auto;
@@ -35,14 +34,12 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Judul */
 h1 {
     color: #2c3e50;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Paragraf */
 p {
     font-size: 16px;
     line-height: 1.6;
