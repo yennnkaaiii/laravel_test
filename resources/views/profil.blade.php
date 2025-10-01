@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Document - Profil</title>
-</head>
-<x-layout></x-layout>
-<body class="bg-gray-900 text-white">
+<x-layout>
+    <x-slot:judul>Profile</x-slot:judul>
+
     <div class="flex items-center justify-center min-h-screen">
-        <div class="text-center">
+        <div class="text-center text-white">
             <h1 class="text-3xl font-bold mb-6">Profil Diri</h1>
-            <p class="text-lg">Nama: {{ $nama }}</p>
-            <p class="text-lg">Kelas: {{ $kelas }}</p>
-            <p class="text-lg">Sekolah: {{ $sekolah }}</p>
+            <p class="text-lg">Nama: Arza</p>
+            <p class="text-lg">Kelas: 11 PPLG 1</p>
+            <p class="text-lg">Sekolah: SMK Raden Umar Said</p>
         </div>
     </div>
-    <style>
-  body {
-    background-color: #0b1a2a; /* Warna gelap */
-    color: white; /* Ubah teks menjadi putih */
-    font-family: Arial, sans-serif;
-  }
-</style>
-</body>
-</html>
+</x-layout>

@@ -9,23 +9,12 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-<a href="/" 
-   class="rounded-md px-3 py-2 text-sm font-medium 
-   {{ request()->is('/') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
-   Dashboard
-</a>
-
-<a href="/kontak" 
-   class="rounded-md px-3 py-2 text-sm font-medium 
-   {{ request()->is('kontak') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
-   Contact
-</a>
-
-<a href="/profil" 
-   class="rounded-md px-3 py-2 text-sm font-medium 
-   {{ request()->is('profil') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
-   Profile
-</a>
+<x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+<x-nav-link href="/kontak" :active="request()->is('kontak')">Contact</x-nav-link>
+<x-nav-link href="/profil" :active="request()->is('profil')">Profile</x-nav-link>
+<x-nav-link href="/student" :active="request()->is('student')">Student</x-nav-link>
+<x-nav-link href="/guardian" :active="request()->is('guardian')">Guardians</x-nav-link>
+<x-nav-link href="/classroom" :active="request()->is('classroom')">Classrooms</x-nav-link>
             </div>
           </div>
         </div>

@@ -7,22 +7,9 @@ use Illuminate\Http\Request;
 class ProfilController extends Controller
 {
     public function index() {
-        return view('beranda');
+           return view('profil' , [
+        'title' => 'Profil', 'nama' => 'nama', 'kelas' => 'kelas', 'sekolah' => 'sekolah'
+    ]);
     }
 
-    public function profil() {
-        $data = [
-            'nama' => 'Arza Armandhito',   
-            'kelas' => '11 PPLG 1',     
-            'sekolah' => 'SMK Raden Umar Said Kudus'
-        ];
-        return view('profil', $data);
-    }
-
-    public function kontak() {
-        return view('kontak');
-    }
-    public function home() {
-        return view('home');
-    }
 }
