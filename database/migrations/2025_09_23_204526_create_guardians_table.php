@@ -17,7 +17,7 @@ public function up()
         $table->string('job');
         $table->string('email');
         $table->string('address');
-        $table->timestamps(); // tambahkan ini
+        $table->timestamps(); 
     });
 }
 

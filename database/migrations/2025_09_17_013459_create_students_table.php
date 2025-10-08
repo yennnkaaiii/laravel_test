@@ -14,7 +14,7 @@ public function up(): void
     Schema::create('students', function (Blueprint $table) {
         $table->id();
         $table->string('name');
-        $table->string('email')->unique(); // email harus unik
+        $table->string('email')->unique(); 
         $table->string('address');
         $table->integer('classroom_id');
         $table->timestamps();

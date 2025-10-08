@@ -9,7 +9,7 @@ class ClassroomController extends Controller
 {
     public function index()
     {
-        $classroom = Classroom::all(); // sudah benar
+        $classroom = Classroom::all(); 
         return view('classroom', [
             'title' => 'Classroom', 
             'classroom' => $classroom
