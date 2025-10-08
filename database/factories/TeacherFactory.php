@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Subject;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Student>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Teacher>
  */
-class StudentFactory extends Factory
+class TeacherFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +19,9 @@ class StudentFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'birthdate' => $this->faker->date(),
+            'subject_id' => Subject::factory(),
+            'phone' => $this->faker->phoneNumber(),
             'email' => $this->faker->unique()->safeEmail(),
-            'classroom_id' => Classroom::factory(),
             'address' => $this->faker->city(),
         ];
     }

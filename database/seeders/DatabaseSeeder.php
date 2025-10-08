@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use App\Models\Student;
-use App\Models\Guardians;
 use App\Models\Classroom;
+use App\Models\Subject;
+use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Student;
+use App\Models\Guardians;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,19 +17,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //\Faker\Factory::create()->unique(true);
-        
-        // Student::factory(10)->create();
-        Guardians::factory(10)->create();
-        //Classroom::factory(4)->create();
+        // Student::factory(30)->create();
+        Guardians::factory(30)->create();
 
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
 
-        Classroom::factory(4)
-            ->hasStudents(5)
-            ->create();
+        Subject::factory(5)->hasTeachers(1)->create();
+        Classroom::factory(5)->hasStudents(5)->create();
     }
 }

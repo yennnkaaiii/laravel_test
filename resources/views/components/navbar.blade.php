@@ -33,6 +33,14 @@
               <x-navlink href="/classroom" :active="request()->is('classroom')">
                 Classroom
               </x-navlink>
+
+              <x-navlink href="/teacher" :active="request()->is('teacher')">
+                Teacher
+              </x-navlink>
+
+              <x-navlink href="/subject" :active="request()->is('subject')">
+                Subject
+              </x-navlink>
               
 
               <!-- <a href="/profil" 
