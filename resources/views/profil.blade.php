@@ -6,7 +6,7 @@
 <body>
     
     <x-layout>
-    <x-slot:judul>Profil</x-slot:judul>
+    <x-slot:title>{{$title}}</x-slot:title>
     <h1>Profil Saya</h1>
     <p>Nama: {{ $nama }}</p>
     <p>Kelas: {{ $kelas }}</p>

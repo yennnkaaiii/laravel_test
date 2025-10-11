@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('address');
             $table->integer('classroom_id');
-            $table->date('birthday');
+           $table->date('birthdate')->nullable();
             $table->timestamps();
         });
     }
