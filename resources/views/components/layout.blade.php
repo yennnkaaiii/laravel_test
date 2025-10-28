@@ -13,11 +13,9 @@
         <div class="min-h-full">
           <x-navbar></x-navbar>
           <x-header>{{ $judul ?? 'Home' }}</x-header>
-          <main>
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-              {{ $slot }}
-            </div>
-          </main>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 pt-4 pb-8">
+    {{ $slot }}
+</main>
         </div>
     </body>
     </html>

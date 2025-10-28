@@ -23,7 +23,15 @@ class TeacherController extends Controller
         $teacher = Teacher::all();
         return view('teacher', ['title' => 'Teacher', 'teacher' => $teacher]);
     }
+    public function adminIndex()
+    {
+        $teacher = Teacher::with('subject')->get();
 
+        return view('components.admin.teacher', [
+            'title' => 'Data Teachers (Admin)',
+            'teacher' => $teacher
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      */

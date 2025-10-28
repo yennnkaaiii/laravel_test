@@ -15,4 +15,14 @@ class SubjectController extends Controller
             'subject' => $subject
         ]);
     }
+    public function adminIndex()
+    {
+        $subject = Subject::all();
+
+        // Mengarah ke resources/views/admin/subject.blade.php
+        return view('components.admin.subject', [ 
+            'title' => 'Data mata pelajaran (Admin)',
+            'subject' => $subject
+        ]);
+    }
 }

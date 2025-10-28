@@ -11,7 +11,7 @@
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Address</th>
                 </tr>
-            </thead>
+            </thead>    
             <tbody class="bg-white divide-y divide-gray-200">
                 @foreach ($teacher as $index => $user)
                     <tr>

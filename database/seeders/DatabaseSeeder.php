@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         Classroom::factory(4)
         ->hasStudents(5) // Setiap kelas memiliki 10 siswa
         ->create();
+        
         Subject::factory(5)
         ->hasTeachers() 
         ->create();
