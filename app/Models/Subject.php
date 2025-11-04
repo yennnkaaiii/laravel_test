@@ -11,7 +11,7 @@ class SUbject extends Model
     use HasFactory;
 
     protected $table = 'subjects';
-    protected $fillable = ['name'];
+    protected $fillable = ['name','description'];
 
     public function teachers()
     {

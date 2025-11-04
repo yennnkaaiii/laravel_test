@@ -9,57 +9,45 @@ use Illuminate\Http\Request;
 
 class AdminTeacherController extends Controller
 {
-    /**
-     * Halaman utama daftar teacher.
-     */
     public function index()
     {
-        $teacher = Teacher::with('subject')->get();
-        $subjects = Subject::all();
+        $teachers = Teacher::with('subject')->get();
 
-        // ✅ Pastikan view-nya berada di resources/views/components/admin/teacher.blade.php
         return view('components.admin.teacher', [
             'title' => 'Teacher List',
-            'teacher' => $teacher,
-            'subjects' => $subjects,
+            'teacher' => $teachers
         ]);
     }
 
-    /**
-     * Simpan teacher baru ke database.
-     */
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:teachers,email', // ✅ tambahkan validasi email
-            'subject_id' => 'required|exists:subjects,id',
-            'phone' => 'required|string|max:20',
-            'address' => 'required|string|max:255',
+            'name' => 'required',
+            'subject_name' => 'required',
+            'subject_description' => 'nullable',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'address' => 'required',
         ]);
 
-        // ✅ Gunakan hanya field yang diizinkan (hindari mass assignment error)
-        Teacher::create([
+        // 1️⃣ Buat subject dulu
+        $subject = Subject::create([
+            'name' => $request->subject_name,
+            'description' => $request->subject_description ?? 'Belum ada deskripsi',
+        ]);
+
+        // 2️⃣ Buat teacher dan isi subject_id dari subject yang baru dibuat
+        $teacher = Teacher::create([
             'name' => $request->name,
             'email' => $request->email,
-            'subject_id' => $request->subject_id,
             'phone' => $request->phone,
             'address' => $request->address,
+            'subject_id' => $subject->id,
         ]);
 
-        return redirect()->route('admin.teacher.index')->with('success', 'Teacher added successfully!');
-    }
+        // ✅ Tidak perlu buat Subject kedua atau pakai save()
+        // Relasi sudah otomatis terhubung lewat subject_id
 
-    /**
-     * Tampilan khusus untuk komponen admin (misalnya dashboard embed).
-     */
-    public function adminIndex()
-    {
-        $teacher = Teacher::with('subject')->get();
-
-        return view('components.admin.teacher', [
-            'title' => 'Data Teachers (Admin)',
-            'teacher' => $teacher
-        ]);
+        return redirect()->back()->with('success', 'Teacher dan Subject berhasil ditambahkan!');
     }
 }
