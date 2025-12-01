@@ -9,17 +9,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('address');
-            $table->string('phone');
-            $table->unsignedBigInteger('subject_id');
-            $table->timestamps();
+    $table->id();
+    $table->string('name');
+    $table->string('email')->unique();
+    $table->string('address');
+    $table->string('phone');
+    $table->unsignedBigInteger('subject_id');
+    $table->timestamps();
 
-            // Foreign key ke subjects
-            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
-        });
+    $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
+});
+
     }
 
     public function down(): void

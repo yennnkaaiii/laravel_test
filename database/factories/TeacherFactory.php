@@ -20,11 +20,9 @@ class TeacherFactory extends Factory
 return [
             'name' => fake()->name(),
             'subject_id' => Subject::factory(), 
-            'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),
             'address' => fake()->address(),
             
         ];
     }
 }
-

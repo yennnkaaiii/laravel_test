@@ -3,7 +3,7 @@
         <div class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8 border border-gray-200 dark:border-gray-700 w-full max-w-md text-center">
             <!-- Isi profil -->
             <img class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-indigo-500"
-                 src="https://i.pinimg.com/736x/35/19/1a/35191a7f65fe42bcb31dd84fa189663c.jpg"
+                 src="https://media-cgk1-2.cdn.whatsapp.net/v/t61.24694-24/518512114_1071904621197043_5217716517752074548_n.jpg?ccb=11-4&oh=01_Q5Aa3AERC_ePpUeNDOkrPIDHLpEDEEYfQ72Vuj0PGNDIAldrrw&oe=69211925&_nc_sid=5e03e0&_nc_cat=105"
                  alt="Foto Profil">
             <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Profil Diri</h1>
             <div class="text-left space-y-3">

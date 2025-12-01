@@ -35,7 +35,7 @@
               <button class="relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                 <span class="absolute -inset-1.5"></span>
                 <span class="sr-only">Open user menu</span>
-                <img src="https://i.pinimg.com/736x/a8/20/5b/a8205b0d89eadf69ed7502f08229c4fb.jpg" alt="" class="size-8 rounded-full outline -outline-offset-1 outline-white/10" />
+                <img src="https://media-cgk1-2.cdn.whatsapp.net/v/t61.24694-24/518512114_1071904621197043_5217716517752074548_n.jpg?ccb=11-4&oh=01_Q5Aa3AERC_ePpUeNDOkrPIDHLpEDEEYfQ72Vuj0PGNDIAldrrw&oe=69211925&_nc_sid=5e03e0&_nc_cat=105" alt="" class="size-8 rounded-full outline -outline-offset-1 outline-white/10" />
               </button>
 
               <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-gray-800 py-1 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">

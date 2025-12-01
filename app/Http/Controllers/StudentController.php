@@ -12,8 +12,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
+        // Ambil semua data student dari database
+        $students = Student::with('classroom')->get();
 
+        // Kirim data ke view student.blade.php
         return view('student', [
             'title' => 'Student',
             'students' => $students
@@ -22,6 +24,6 @@ class StudentController extends Controller
 
     /**
      * Halaman admin (backend)
+     * (bisa diisi nanti kalau diperlukan)
      */
-
 }
