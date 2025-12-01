@@ -11,7 +11,7 @@ class AdminProfileController extends Controller
     {
         return view('components.admin.profil', [
             'title' => 'Profil Admin',
-            'nama' => 'Arza Armandhito',
+            'nama' => 'Aldikky Arfian Susanto',
             'kelas' => 'XI PPLG 1',
             'sekolah' => 'SMK Raden Umar Said'
         ]);
